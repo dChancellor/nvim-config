@@ -24,15 +24,4 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
-local cmp_mappings = lsp.defaults.cmp_mappings({
-  ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
-  ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-  ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-  ["<C-Space>"] = cmp.mapping.complete(),
-})
-
-lsp.setup_nvim_cmp({
-	mapping = cmp_mappings
-})
-
 lsp.setup()
