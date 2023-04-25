@@ -10,13 +10,13 @@ return require('packer').startup(function(use)
 		'nvim-telescope/telescope.nvim', tag = '0.1.1',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
-	use({
-		'projekt0n/github-nvim-theme', tag = 'v0.0.7',
-		config = function()
-			require('github-theme').setup()
-			vim.cmd('colorscheme github_dark')
-		end
-	})
+	--use({
+	--	'projekt0n/github-nvim-theme', tag = 'v0.0.7',
+	--	config = function()
+	--		require('github-theme').setup()
+	--	vim.cmd('colorscheme github_dark')
+	--	end})
+	use { "bluz71/vim-nightfly-colors", as = "nightfly" }
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use('nvim-treesitter/playground')
 	use('ThePrimeagen/harpoon')
@@ -61,17 +61,32 @@ use {
 use('github/copilot.vim')
 use('theprimeagen/vim-be-good')
 use('windwp/nvim-ts-autotag')
-use('nvim-tree/nvim-tree.lua')
+-- use('nvim-tree/nvim-tree.lua')
 use {
-  "folke/todo-comments.nvim",
-  requires = "nvim-lua/plenary.nvim",
-  config = function()
-    require("todo-comments").setup {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    }
-  end
+	"folke/todo-comments.nvim",
+	requires = "nvim-lua/plenary.nvim",
+	config = function()
+		require("todo-comments").setup {
+			-- your configuration comes here
+			-- or leave it empty to use the default settings
+			-- refer to the configuration section below
+		}
+	end
+}
+use('ThePrimeagen/git-worktree.nvim')
+
+-- NOTE: This is for neo-tree
+-- Unless you are still migrating, remove the deprecated commands from v1.x
+vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
+
+use {
+	"nvim-neo-tree/neo-tree.nvim",
+	branch = "v2.x",
+	requires = { 
+		"nvim-lua/plenary.nvim",
+		"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+		"MunifTanjim/nui.nvim",
+	}
 }
  end)
 
