@@ -10,13 +10,9 @@ return require('packer').startup(function(use)
 		'nvim-telescope/telescope.nvim', tag = '0.1.1',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
-	--use({
-	--	'projekt0n/github-nvim-theme', tag = 'v0.0.7',
-	--	config = function()
-	--		require('github-theme').setup()
-	--	vim.cmd('colorscheme github_dark')
-	--	end})
-	use { "bluz71/vim-nightfly-colors", as = "nightfly" }
+	-- NOTE: this one has highlights
+	-- use { "bluz71/vim-nightfly-colors", as = "nightfly" }
+	use('kwsp/halcyon-neovim')
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use('nvim-treesitter/playground')
 	use('ThePrimeagen/harpoon')
@@ -61,7 +57,6 @@ use {
 use('github/copilot.vim')
 use('theprimeagen/vim-be-good')
 use('windwp/nvim-ts-autotag')
--- use('nvim-tree/nvim-tree.lua')
 use {
 	"folke/todo-comments.nvim",
 	requires = "nvim-lua/plenary.nvim",
@@ -88,6 +83,7 @@ use {
 		"MunifTanjim/nui.nvim",
 	}
 }
+
  end)
 
 
