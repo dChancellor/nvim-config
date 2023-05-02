@@ -1,0 +1,2 @@
+vim.cmd [[colorscheme oliver]]
+vim.cmd [[set termguicolors]]

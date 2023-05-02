@@ -124,15 +124,10 @@ _G.packer_plugins = {
     path = "/Users/dholtzman/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["neo-tree.nvim"] = {
+  nightfly = {
     loaded = true,
-    path = "/Users/dholtzman/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
-    url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
-  },
-  ["nui.nvim"] = {
-    loaded = true,
-    path = "/Users/dholtzman/.local/share/nvim/site/pack/packer/start/nui.nvim",
-    url = "https://github.com/MunifTanjim/nui.nvim"
+    path = "/Users/dholtzman/.local/share/nvim/site/pack/packer/start/nightfly",
+    url = "https://github.com/bluz71/vim-nightfly-colors"
   },
   ["null-ls.nvim"] = {
     loaded = true,
@@ -163,6 +158,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/dholtzman/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
+  oliver = {
+    loaded = true,
+    path = "/Users/dholtzman/.local/share/nvim/site/pack/packer/start/oliver",
+    url = "/Users/dholtzman/.config/nvim/oliver"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -205,11 +205,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/dholtzman/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
-  },
-  ["vim-be-good"] = {
-    loaded = true,
-    path = "/Users/dholtzman/.local/share/nvim/site/pack/packer/start/vim-be-good",
-    url = "https://github.com/theprimeagen/vim-be-good"
   },
   ["vim-fugitive"] = {
     loaded = true,

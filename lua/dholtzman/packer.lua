@@ -6,14 +6,15 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
+	use '~/.config/nvim/oliver'
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.1',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 	-- NOTE: this one has highlights
-	-- use { "bluz71/vim-nightfly-colors", as = "nightfly" }
+	use { "bluz71/vim-nightfly-colors", as = "nightfly" }
 	use('kwsp/halcyon-neovim')
-	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}) 
 	use('nvim-treesitter/playground')
 	use('ThePrimeagen/harpoon')
 	use('mbbill/undotree')
@@ -55,7 +56,6 @@ use {
 	end
 }
 use('github/copilot.vim')
-use('theprimeagen/vim-be-good')
 use('windwp/nvim-ts-autotag')
 use {
 	"folke/todo-comments.nvim",
@@ -69,20 +69,6 @@ use {
 	end
 }
 use('ThePrimeagen/git-worktree.nvim')
-
--- NOTE: This is for neo-tree
--- Unless you are still migrating, remove the deprecated commands from v1.x
-vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
-
-use {
-	"nvim-neo-tree/neo-tree.nvim",
-	branch = "v2.x",
-	requires = { 
-		"nvim-lua/plenary.nvim",
-		"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-		"MunifTanjim/nui.nvim",
-	}
-}
 
  end)
 
